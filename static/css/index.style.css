@@ -54,11 +54,26 @@
 
 .coluna {
     flex: 25%;
-    padding: 0 8px;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
 .coluna img {
-    margin: 4px;
+    margin-top: 8px;
     vertical-align: middle;
-    max-width: 400px;
+    width: 100%;
 }
+
+@media screen and (max-width: 800px) {
+    .coluna {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .coluna {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
