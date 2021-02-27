@@ -31,26 +31,12 @@
     padding-right: 10px !important;
 }
 
-#ishare {
-    font-style: normal !important;
-    font-weight: bold !important;
-    font-family: 'Roboto' !important;
-    color: #f1f1f1;
-}
 
-#ishare.dark {
-    color: #353535;
-}
-
-#ipics {
-    color: rgb(0, 0, 187);
-    font-style: normal;
-}
 
 .linha {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 10px;
 }
 
 /* Create two equal columns that sits next to each other */
@@ -58,11 +44,11 @@
 .coluna {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 0 8px;
 }
 
 .coluna img {
-    margin-top: 8px;
+    margin-top: 10px;
     vertical-align: middle;
     width: 100%;
 }

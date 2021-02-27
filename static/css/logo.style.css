@@ -1,0 +1,15 @@
+#ishare {
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-family: 'Roboto' !important;
+    color: #f1f1f1;
+}
+
+#ishare.dark {
+    color: #353535;
+}
+
+#ipics {
+    color: rgb(0, 0, 187);
+    font-style: normal;
+}
