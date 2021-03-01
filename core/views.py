@@ -27,20 +27,6 @@ class home(ListView):
 
 
 def cadastrar_usuario(request):
-    '''
-    if request.method == 'POST':
-        form_user = UserCreationForm(request.POST)
-        if form_user.is_valid():
-            form_user.save()
-            return reverse('core:home')
-
-    else:
-        form_user = UserCreationForm()
-
-    return render(request, 'registration/cad_new_user.html', {
-        'form': form_user
-    })
-'''
     if request.method == 'POST':
         form = SingUpForm(request.POST)
         if form.is_valid():

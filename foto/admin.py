@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Imagem
+from .models import Imagem, Categoria
 
 
 # Register your models here.
@@ -11,3 +11,6 @@ class AdminImagem(admin.ModelAdmin):
         if getattr(obj, 'autor', None) is None:
             obj.autor = request.user
         obj.save()
+
+
+admin.site.register(Categoria)

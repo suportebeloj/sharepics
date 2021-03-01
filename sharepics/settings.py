@@ -28,6 +28,13 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
+MY_APPS = [
+    'core',
+    'foto',
+    'users',
+
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -35,9 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
-    'foto',
-]
+
+] + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,3 +129,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 LOGIN_REDIRECT_URL = 'core:home'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# MINHA CONFIGURAÇãO DE USUARIO PERSONALIZADO
+AUTH_USER_MODEL = 'users.CustomUser'

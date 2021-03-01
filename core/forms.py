@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 
 
 class SingUpForm(UserCreationForm):
+
+    '''
+    email = forms.EmailField(max_length=254, help_text='Informe um E-mail valido.',
+                             widget=forms.EmailInput(attrs={'placeholder': 'E-mail'}))
+    '''
     email = forms.EmailField(max_length=254, help_text='Informe um E-mail valido.')
 
     class Meta:
