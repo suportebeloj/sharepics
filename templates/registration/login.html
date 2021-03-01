@@ -69,7 +69,12 @@
 
                             <input class="btn btn-primary btn-lg btn-block" type="submit" value="login">
                             <input type="hidden" name="next" value="{{ next }}">
-                            <a class="pt-2 text-info" href="{% url 'password_reset' %}">Esqueceu sua senha?</a>
+                            <p>
+                                <a class="pt-2 text-info" href="{% url 'password_reset' %}">Esqueceu sua senha?</a>
+                            </p>
+                            <p>
+                                <a class="text-info" href="{% url 'core:cadastrar' %}">Cadastre-se?</a>
+                            </p>
                         </form>
 
                     </div>

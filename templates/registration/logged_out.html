@@ -8,7 +8,7 @@
                 alt="">
             <h3>Você saiu!</h3>
             <a href="{% url 'login'%}">Click aqui para logar novamente.</a>
-            <h4></h4>
+            <h4 style="height: 30px;"></h4>
         </div>
     </div>
 
@@ -18,7 +18,7 @@
     let h4 = document.querySelector('h4')
     let countdown = setInterval(() => {
         if (count > 0) {
-            h4.innerHTML = count
+            h4.innerText = `Redirecionando para home em: ${count}`
             count--
         }
         else {

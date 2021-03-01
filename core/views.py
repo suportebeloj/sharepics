@@ -1,7 +1,13 @@
-from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
+from django.shortcuts import render, reverse, redirect
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import login, authenticate
+from django.urls import reverse_lazy
 from django.views.generic import ListView
 from foto.models import Imagem
+
+from .forms import SingUpForm
+
 from random import choice
 
 
@@ -20,3 +26,32 @@ class home(ListView):
         return context
 
 
+def cadastrar_usuario(request):
+    '''
+    if request.method == 'POST':
+        form_user = UserCreationForm(request.POST)
+        if form_user.is_valid():
+            form_user.save()
+            return reverse('core:home')
+
+    else:
+        form_user = UserCreationForm()
+
+    return render(request, 'registration/cad_new_user.html', {
+        'form': form_user
+    })
+'''
+    if request.method == 'POST':
+        form = SingUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            user = form.cleaned_data.get('username')
+            pwd = form.cleaned_data.get('password1')
+            username = authenticate(username=user, password=pwd)
+            login(request, username)
+            return HttpResponseRedirect(reverse_lazy('core:home'))
+    else:
+        form = SingUpForm()
+        return render(request, 'registration/cad_new_user.html', {
+            'form': form
+        })
