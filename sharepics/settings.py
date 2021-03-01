@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ["*"]
 MY_APPS = [
     'core',
     'foto',
-    'users',
+    'users.apps.UsersConfig',
 
 ]
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 
 ] + MY_APPS
 

@@ -1,10 +1,11 @@
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, reverse, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views.generic import ListView
 from foto.models import Imagem
+
+import numpy as np
 
 from .forms import SingUpForm
 
