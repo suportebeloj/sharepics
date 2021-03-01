@@ -5,7 +5,6 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView
 from foto.models import Imagem
 
-import numpy as np
 
 from .forms import SingUpForm
 
