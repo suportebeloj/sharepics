@@ -137,8 +137,11 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-#medias
+# medias
 media/
 
-#Pycharm
+# Pycharm
 .idea/
+
+# VS CODE
+.vscode/
