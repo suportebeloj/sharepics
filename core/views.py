@@ -22,7 +22,9 @@ class home(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         img = Imagem.objects.all()
-        context['banner'] = choice(img)
+        if img:
+            context['banner'] = choice(img)
+            return context
         return context
 
 
